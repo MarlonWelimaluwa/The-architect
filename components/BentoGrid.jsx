@@ -39,7 +39,7 @@ export default function BentoGrid() {
                 {/* Section header */}
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="text-5xl md:text-6xl font-bold text-white">
-                        Proven <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Results</span>
+                        Proven <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">Results</span>
                     </h2>
                     <p className="text-xl text-zinc-400">
                         Trusted by elite consultants worldwide
@@ -58,7 +58,7 @@ export default function BentoGrid() {
                                     ))}
                                 </div>
                                 <p className="text-2xl text-white leading-relaxed">
-                                    "{testimonials[0].text}"
+                                    &#34;{testimonials[0].text}&#34;
                                 </p>
                             </div>
                             <div className="space-y-1">
@@ -108,7 +108,7 @@ export default function BentoGrid() {
                                 ))}
                             </div>
                             <p className="text-xl text-white">
-                                "{testimonials[1].text}"
+                                &#34;{testimonials[1].text}&#34;
                             </p>
                             <div className="space-y-1">
                                 <p className="text-base font-semibold text-white">{testimonials[1].name}</p>
@@ -126,7 +126,7 @@ export default function BentoGrid() {
                                 ))}
                             </div>
                             <p className="text-base text-white">
-                                "{testimonials[2].text}"
+                                &#34;{testimonials[2].text}&#34;
                             </p>
                             <div className="space-y-1">
                                 <p className="text-sm font-semibold text-white">{testimonials[2].name}</p>
