@@ -15,9 +15,9 @@ export default function Footer() {
         ],
         services: [
             { name: 'Strategy Consulting', href: '/#contact-section' },
-            { name: 'System Architecture', href: '/#methodology-section' },
-            { name: 'Automation', href: '/#methodology-section' },
-            { name: 'Scaling Solutions', href: '/#methodology-section' },
+            { name: 'System Architecture', href: '/methodology' },
+            { name: 'Automation', href: '/methodology' },
+            { name: 'Scaling Solutions', href: '/methodology' },
         ],
         legal: [
             { name: 'Privacy Policy', href: '/privacy' },
@@ -128,7 +128,7 @@ export default function Footer() {
                         © {currentYear} The Architect. All rights reserved.
                     </p>
                     <p className="text-zinc-500 text-sm">
-                        Built with <span className="text-primary">Next.js</span> & <span className="text-primary">Supabase</span> by Marlon.
+                        Built with <span className="text-primary">Next.js</span> & <span className="text-primary">Supabase</span>
                     </p>
                 </div>
             </div>
