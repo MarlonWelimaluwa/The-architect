@@ -15,9 +15,9 @@ export default function Footer() {
         ],
         services: [
             { name: 'Strategy Consulting', href: '/#contact-section' },
-            { name: 'System Architecture', href: '/methodology' },
-            { name: 'Automation', href: '/methodology' },
-            { name: 'Scaling Solutions', href: '/methodology' },
+            { name: 'System Architecture', href: '/#methodology-section' }, // Changed
+            { name: 'Automation', href: '/#methodology-section' },          // Changed
+            { name: 'Scaling Solutions', href: '/#methodology-section' },
         ],
         legal: [
             { name: 'Privacy Policy', href: '/privacy' },
