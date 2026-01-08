@@ -28,11 +28,21 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-feature-settings: "rlig" 1, "calt" 1;
+    /* Prevent horizontal scroll */
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
   /* Modern Border Logic for v4 */
   *, ::after, ::before, ::backdrop {
     border-color: var(--color-border, currentColor);
+  }
+
+  /* THE FIX: Prevents text clipping and overlapping on mobile browsers */
+  h1, h2, h3, h4 {
+    overflow: visible !important;
+    line-height: 1.2 !important; /* Adds vertical space between wrapped words */
+    padding-bottom: 4px; /* Prevents the bottom of letters being cut */
   }
 }
 
@@ -53,10 +63,11 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
-
-/* Hide default cursor on interactive elements */
+/* Hide default cursor on interactive elements - PRESERVED */
 /*
 button, a, input, textarea {
   cursor: none !important;
@@ -75,16 +86,18 @@ button, a, input, textarea {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
+
 .animate-gradient {
   background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
+  animation: gradient-shift 8s ease infinite;
 }
 
-/* Shimmer Loading */
+/* Shimmer Loading - PRESERVED */
 @keyframes shimmer {
   0% { background-position: -1000px 0; }
   100% { background-position: 1000px 0; }
 }
+
 .shimmer {
   animation: shimmer 2s infinite linear;
   background: linear-gradient(

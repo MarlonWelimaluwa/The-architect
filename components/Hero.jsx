@@ -21,33 +21,32 @@ export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
             <div className="absolute inset-0 bg-mesh-gradient opacity-30 animate-pulse" />
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:64px_64px] transition-all" />
 
             <div className="relative z-10 max-w-7xl mx-auto w-full">
-                <div className="text-center space-y-8 mb-16 animate-fade-in">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm">
-                        <span className="w-2 h-2 bg-primary rounded-full animate-glow" />
-                        <span className="text-sm text-primary font-medium uppercase tracking-wider">Limited Availability</span>
+                <div className="text-center space-y-8 mb-20">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/10 backdrop-blur-sm">
+                        <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                        <span className="text-xs font-bold text-primary uppercase tracking-widest">Limited Intake 2024</span>
                     </div>
 
-                    <h1 className="text-6xl md:text-8xl font-bold text-white tracking-tight">
-                        Architecting Systems
+                    <h1 className="text-5xl md:text-8xl font-bold text-white tracking-tight leading-[1.1]">
+                        <span className="inline-block pr-2">Architecting Systems</span>
                         <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary">
-                          for Elite Consultants
+                        <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary animate-gradient pr-4">
+                            for Elite Consultants
                         </span>
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-lg md:text-2xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
                         High-performance infrastructure and strategy for the 1%.
-                        <br />
-                        <span className="text-zinc-500">Engineered for scale. Driven by execution excellence.</span>
+                        Built on code, driven by data, and engineered for absolute scale.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <Button
                             size="lg"
-                            className="group px-8"
+                            className="group bg-primary text-black hover:bg-primary/90 px-8"
                             onClick={() => scrollToSection('contact-section')}
                         >
                             Apply for Strategy Audit
@@ -76,7 +75,7 @@ export default function Hero() {
                                 <div className="relative space-y-2 text-center">
                                     <Icon className="w-6 h-6 text-primary mx-auto" />
                                     <p className="text-3xl font-bold text-white">{stat.value}</p>
-                                    <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">{stat.label}</p>
+                                    <p className="text-[10px] md:text-xs font-bold text-zinc-500 uppercase tracking-widest">{stat.label}</p>
                                 </div>
                             </div>
                         );

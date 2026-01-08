@@ -110,12 +110,12 @@ export default function Footer() {
                         <ul className="space-y-3">
                             {links.legal.map((link, index) => (
                                 <li key={index}>
-                                    <Link
+                                    <a
                                         href={link.href}
                                         className="text-zinc-400 hover:text-primary transition-colors duration-300"
                                     >
                                         {link.name}
-                                    </Link>
+                                    </a>
                                 </li>
                             ))}
                         </ul>

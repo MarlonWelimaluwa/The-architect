@@ -35,20 +35,20 @@ export default function BentoGrid() {
     ];
 
     return (
-        <section className="relative py-32 px-6 bg-black overflow-hidden">
+        <section className="relative py-32 px-6 bg-black">
             <div className="absolute inset-0 opacity-10 pointer-events-none"
                  style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #27272a 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
             <div className="relative z-10 max-w-7xl mx-auto">
                 <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tight">Proven Results</h2>
+                    <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tight overflow-visible pr-2">Proven Results</h2>
                     <p className="text-xl text-zinc-400 font-light italic">Infrastructure that drives 7-figure growth.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                    {/* ROW 1: Featured Testimonial + Status */}
-                    <div className="md:col-span-2 p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group overflow-hidden">
+                    {/* TOP ROW: Featured Testimonial + Status */}
+                    <div className="md:col-span-2 p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group overflow-visible">
                         <div className="h-full flex flex-col justify-between relative z-10">
                             <div className="space-y-6">
                                 <div className="flex gap-1">
@@ -66,7 +66,7 @@ export default function BentoGrid() {
                         </div>
                     </div>
 
-                    <div className="p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl flex flex-col justify-center items-center text-center space-y-6 group hover:border-primary/50 transition-all duration-500">
+                    <div className="p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl flex flex-col justify-center items-center text-center space-y-6 group hover:border-primary/50 transition-all duration-500 overflow-visible">
                         <div className="relative w-20 h-20">
                             <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse" />
                             <Circle className="w-20 h-20 text-primary relative z-10" />
@@ -80,7 +80,7 @@ export default function BentoGrid() {
                         </div>
                     </div>
 
-                    {/* ROW 2: Tech Stack + Stats 1 & 2 */}
+                    {/* MIDDLE ROW: Tech Stack + Stats 1 & 2 */}
                     <div className="p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500">
                         <p className="text-xl font-bold text-white mb-6 uppercase tracking-wider">The Engine</p>
                         <div className="grid grid-cols-1 gap-3">
@@ -94,7 +94,7 @@ export default function BentoGrid() {
                     </div>
 
                     {stats.slice(0, 2).map((stat, index) => (
-                        <div key={index} className="relative p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group overflow-hidden">
+                        <div key={index} className="relative p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group overflow-visible">
                             <div className="absolute inset-0 opacity-5 group-hover:opacity-20 transition-opacity"
                                  style={{ backgroundImage: 'linear-gradient(#06b6d4 1px, transparent 1px), linear-gradient(90deg, #06b6d4 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
                             <div className="relative z-10">
@@ -105,8 +105,8 @@ export default function BentoGrid() {
                         </div>
                     ))}
 
-                    {/* ROW 3: Stat 3 + Marcus (CENTERED) + NEW FILLER CARD */}
-                    <div className="relative p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group overflow-hidden">
+                    {/* BOTTOM ROW: Stat 3 + Marcus + Globe */}
+                    <div className="relative p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group overflow-visible">
                         <div className="absolute inset-0 opacity-5 group-hover:opacity-20 transition-opacity"
                              style={{ backgroundImage: 'linear-gradient(#06b6d4 1px, transparent 1px), linear-gradient(90deg, #06b6d4 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
                         <div className="relative z-10">
@@ -116,7 +116,7 @@ export default function BentoGrid() {
                         </div>
                     </div>
 
-                    <div className="p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group relative">
+                    <div className="p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group relative overflow-visible">
                         <div className="space-y-6">
                             <div className="flex gap-1">
                                 {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
@@ -132,17 +132,16 @@ export default function BentoGrid() {
                         </div>
                     </div>
 
-                    {/* NEW FILLER CARD - Global Reach */}
-                    <div className="p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group flex flex-col justify-between">
-                        <Globe className="w-10 h-10 text-primary group-hover:animate-spin-slow transition-all" />
+                    <div className="p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group flex flex-col justify-between overflow-visible">
+                        <Globe className="w-10 h-10 text-primary group-hover:rotate-12 transition-all" />
                         <div>
                             <p className="text-2xl font-bold text-white">Global Reach</p>
                             <p className="text-sm text-zinc-400">Serving elite clients across 4 continents from our architectural hub.</p>
                         </div>
                     </div>
 
-                    {/* ROW 4: Emily (FULL WIDTH ANCHOR) */}
-                    <div className="md:col-span-3 p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group relative">
+                    {/* EMILY (Wide Anchor) */}
+                    <div className="md:col-span-3 p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group relative overflow-visible">
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
                             <div className="space-y-4 max-w-2xl">
                                 <div className="flex gap-1">

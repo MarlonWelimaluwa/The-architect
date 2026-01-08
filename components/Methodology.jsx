@@ -39,8 +39,17 @@ export default function Methodology() {
             <div className="relative z-10 max-w-7xl mx-auto">
                 {/* Section header */}
                 <div className="text-center mb-20 space-y-4">
-                    <h2 className="text-5xl md:text-6xl font-bold text-white">
-                        The <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">Methodology</span>
+                    <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tight">
+                        The {' '}
+                        <span
+                            className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary pb-1 pr-4"
+                            style={{
+                                WebkitBoxDecorationBreak: 'clone',
+                                boxDecorationBreak: 'clone',
+                                display: 'inline',
+                                paddingRight: '0.2em'
+                            }}
+                        >Methodology</span>
                     </h2>
                     <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
                         Our battle-tested framework for transforming consultancy businesses into scalable powerhouses.
