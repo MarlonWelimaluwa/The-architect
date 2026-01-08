@@ -1,6 +1,6 @@
 'use client';
 
-import { Star, Circle, Zap, TrendingUp, Award } from 'lucide-react';
+import { Star, Circle, Zap, TrendingUp, Award, Globe } from 'lucide-react';
 
 export default function BentoGrid() {
     const techStack = [
@@ -40,13 +40,14 @@ export default function BentoGrid() {
                  style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #27272a 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
             <div className="relative z-10 max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">Proven Results</h2>
-                    <p className="text-zinc-400 text-lg">Infrastructure that drives 7-figure growth.</p>
+                <div className="text-center mb-16 space-y-4">
+                    <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tight">Proven Results</h2>
+                    <p className="text-xl text-zinc-400 font-light italic">Infrastructure that drives 7-figure growth.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {/* Main Testimonial */}
+
+                    {/* ROW 1: Featured Testimonial + Status */}
                     <div className="md:col-span-2 p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group overflow-hidden">
                         <div className="h-full flex flex-col justify-between relative z-10">
                             <div className="space-y-6">
@@ -65,7 +66,6 @@ export default function BentoGrid() {
                         </div>
                     </div>
 
-                    {/* Status Card */}
                     <div className="p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl flex flex-col justify-center items-center text-center space-y-6 group hover:border-primary/50 transition-all duration-500">
                         <div className="relative w-20 h-20">
                             <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse" />
@@ -80,7 +80,7 @@ export default function BentoGrid() {
                         </div>
                     </div>
 
-                    {/* Tech Stack */}
+                    {/* ROW 2: Tech Stack + Stats 1 & 2 */}
                     <div className="p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500">
                         <p className="text-xl font-bold text-white mb-6 uppercase tracking-wider">The Engine</p>
                         <div className="grid grid-cols-1 gap-3">
@@ -93,8 +93,7 @@ export default function BentoGrid() {
                         </div>
                     </div>
 
-                    {/* Stats */}
-                    {stats.map((stat, index) => (
+                    {stats.slice(0, 2).map((stat, index) => (
                         <div key={index} className="relative p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group overflow-hidden">
                             <div className="absolute inset-0 opacity-5 group-hover:opacity-20 transition-opacity"
                                  style={{ backgroundImage: 'linear-gradient(#06b6d4 1px, transparent 1px), linear-gradient(90deg, #06b6d4 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
@@ -105,6 +104,62 @@ export default function BentoGrid() {
                             </div>
                         </div>
                     ))}
+
+                    {/* ROW 3: Stat 3 + Marcus (CENTERED) + NEW FILLER CARD */}
+                    <div className="relative p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group overflow-hidden">
+                        <div className="absolute inset-0 opacity-5 group-hover:opacity-20 transition-opacity"
+                             style={{ backgroundImage: 'linear-gradient(#06b6d4 1px, transparent 1px), linear-gradient(90deg, #06b6d4 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
+                        <div className="relative z-10">
+                            <Award className="w-10 h-10 text-primary mb-6 group-hover:scale-110 transition-transform" />
+                            <p className="text-5xl font-black text-white mb-2 tracking-tighter">{stats[2].value}</p>
+                            <p className="text-xs font-black text-zinc-500 uppercase tracking-widest">{stats[2].label}</p>
+                        </div>
+                    </div>
+
+                    <div className="p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group relative">
+                        <div className="space-y-6">
+                            <div className="flex gap-1">
+                                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+                            </div>
+                            <p className="text-xl text-zinc-200 leading-relaxed font-medium italic">"{testimonials[1].text}"</p>
+                            <div className="flex items-center gap-4 pt-4 border-t border-white/5">
+                                <img src={testimonials[1].image} alt="" className="w-12 h-12 rounded-full grayscale group-hover:grayscale-0 transition-all duration-500" />
+                                <div>
+                                    <p className="text-base font-bold text-white">{testimonials[1].name}</p>
+                                    <p className="text-xs text-zinc-500 font-bold uppercase tracking-wider">{testimonials[1].role}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* NEW FILLER CARD - Global Reach */}
+                    <div className="p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group flex flex-col justify-between">
+                        <Globe className="w-10 h-10 text-primary group-hover:animate-spin-slow transition-all" />
+                        <div>
+                            <p className="text-2xl font-bold text-white">Global Reach</p>
+                            <p className="text-sm text-zinc-400">Serving elite clients across 4 continents from our architectural hub.</p>
+                        </div>
+                    </div>
+
+                    {/* ROW 4: Emily (FULL WIDTH ANCHOR) */}
+                    <div className="md:col-span-3 p-8 rounded-3xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 group relative">
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+                            <div className="space-y-4 max-w-2xl">
+                                <div className="flex gap-1">
+                                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+                                </div>
+                                <p className="text-2xl text-zinc-200 leading-relaxed font-medium italic">"{testimonials[2].text}"</p>
+                            </div>
+                            <div className="flex items-center gap-4 pt-4 md:pt-0 md:pl-8 md:border-l border-white/10">
+                                <img src={testimonials[2].image} alt="" className="w-14 h-14 rounded-full grayscale group-hover:grayscale-0 transition-all duration-500" />
+                                <div>
+                                    <p className="text-lg font-bold text-white">{testimonials[2].name}</p>
+                                    <p className="text-sm text-zinc-500 font-bold uppercase tracking-wider">{testimonials[2].role}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
