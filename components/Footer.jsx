@@ -128,7 +128,7 @@ export default function Footer() {
                         © {currentYear} The Architect. All rights reserved.
                     </p>
                     <p className="text-zinc-500 text-sm">
-                        Built with <span className="text-primary">Next.js</span> & <span className="text-primary">Supabase</span>
+                        Built with <span className="text-primary">Next.js</span> by <span className="text-primary">Marlon.</span>
                     </p>
                 </div>
             </div>
