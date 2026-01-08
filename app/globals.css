@@ -55,10 +55,13 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /* Hide default cursor on interactive elements */
+/*
 button, a, input, textarea {
   cursor: none !important;
 }
+*/
 
 /* Glassmorphism Effect */
 .glass {

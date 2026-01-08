@@ -15,8 +15,8 @@ export default function Footer() {
         ],
         services: [
             { name: 'Strategy Consulting', href: '/#contact-section' },
-            { name: 'System Architecture', href: '/#methodology-section' }, // Changed
-            { name: 'Automation', href: '/#methodology-section' },          // Changed
+            { name: 'System Architecture', href: '/#methodology-section' },
+            { name: 'Automation', href: '/#methodology-section' },
             { name: 'Scaling Solutions', href: '/#methodology-section' },
         ],
         legal: [
@@ -93,12 +93,12 @@ export default function Footer() {
                         <ul className="space-y-3">
                             {links.services.map((link, index) => (
                                 <li key={index}>
-                                    <Link
+                                    <a
                                         href={link.href}
-                                        className="text-zinc-400 hover:text-primary transition-colors duration-300"
+                                        className="text-zinc-400 hover:text-primary transition-colors duration-300 cursor-pointer"
                                     >
                                         {link.name}
-                                    </Link>
+                                    </a>
                                 </li>
                             ))}
                         </ul>

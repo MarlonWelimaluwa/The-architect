@@ -40,7 +40,7 @@ export default function Methodology() {
                 {/* Section header */}
                 <div className="text-center mb-20 space-y-4">
                     <h2 className="text-5xl md:text-6xl font-bold text-white">
-                        The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Methodology</span>
+                        The <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">Methodology</span>
                     </h2>
                     <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
                         Our battle-tested framework for transforming consultancy businesses into scalable powerhouses.
@@ -57,7 +57,7 @@ export default function Methodology() {
                                 className="group relative p-8 rounded-2xl border border-zinc-800/50 bg-zinc-900/30 backdrop-blur-md hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
                             >
                                 {/* Glow effect on hover */}
-                                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl`} />
+                                <div className={`absolute inset-0 rounded-2xl bg-linear-to-br ${step.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl`} />
 
                                 {/* Number indicator */}
                                 <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-black border-2 border-primary flex items-center justify-center">
@@ -66,7 +66,7 @@ export default function Methodology() {
 
                                 <div className="relative space-y-4">
                                     {/* Icon */}
-                                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
+                                    <div className={`w-16 h-16 rounded-2xl bg-linear-to-br ${step.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
                                         <Icon className="w-8 h-8 text-white" />
                                     </div>
 
@@ -83,7 +83,7 @@ export default function Methodology() {
 
                                 {/* Connecting line (except for last card) */}
                                 {index < steps.length - 1 && (
-                                    <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-primary to-transparent" />
+                                    <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-linear-to-r from-primary to-transparent" />
                                 )}
                             </div>
                         );
