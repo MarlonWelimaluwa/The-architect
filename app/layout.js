@@ -5,8 +5,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-    title: 'The Architect - Scalable Systems for the 1%',
-    description: 'High-performance infrastructure and strategy for elite consultants. Built on code, driven by data.',
+    title: 'The Architect | High-Performance Systems for Elite Consultants',
+    description: 'Architecting custom digital infrastructure and automation for 7-figure consulting businesses. Built on code, driven by data.',
+    icons: {
+        icon: '/favicon.ico', // Make sure to drop your new favicon in the public folder
+    },
 };
 
 export default function RootLayout({ children }) {
