@@ -123,7 +123,7 @@ export default function ConsultantPortal() {
                                         </label>
                                         <Input
                                             name="name"
-                                            placeholder="John Doe"
+                                            placeholder="Jeremy Croos"
                                             value={formData.name}
                                             onChange={handleChange}
                                             disabled={loading}
@@ -137,7 +137,7 @@ export default function ConsultantPortal() {
                                         <Input
                                             name="email"
                                             type="email"
-                                            placeholder="john@company.com"
+                                            placeholder="jeremy@company.com"
                                             value={formData.email}
                                             onChange={handleChange}
                                             disabled={loading}
